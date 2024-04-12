@@ -1,0 +1,4 @@
+Crear smbfolder
+
+Levantar servicio
+-> impacket-smbserver smbfolder $(pwd) -smb2support
