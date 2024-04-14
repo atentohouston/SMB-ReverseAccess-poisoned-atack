@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceder al recurso - Sin conexión</title>
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(0, 0, 0);
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Ajusta el espacio entre los elementos del nav */
+      height: 100px; /* Ajusta la altura del nav según sea necesario */
+      max-width: 800px; /* Ancho máximo del nav */
+      margin: 0 auto; /* Centra el nav horizontalmente */
+      padding: 0 20px; /* Agrega relleno a los lados del nav */
+    }
+    ul {
+      margin: 0; /* Elimina el margen del ul */
+      padding: 0; /* Elimina el relleno del ul */
+      list-style-type: none; /* Elimina los marcadores de lista */
+    }
+    
+    ul li {
+      display: inline-block; /* Muestra los elementos de lista en línea */
+      /*margin-right: 20px; /* Agrega margen derecho entre los elementos */
+    }
+
+    .logo-container {
+      text-align: left;
+    }
+
+    .logo-container img {
+      width: 60px;
+      border-radius: 50%;
+    }
+
+    .content {
+      text-align: center;
+      flex-grow: 1; /* Permite que el elemento ocupe el espacio restante */
+    }
+
+ 
+
+    .content p {
+      font-size: 16px; /* Reducir el tamaño del texto */
+      margin-top: 10px; /* Ajustar el margen superior */
+
+    }
+    p{
+      color: gray;
+      text-align: center;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      padding: 6px 12px; /* Reduce el espacio de relleno */
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px; /* Reduce el espaciado entre letras */
+      text-decoration: none;
+      font-size: 14px; /* Reduce el tamaño del texto */
+      overflow: hidden;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: #64ff1c;
+      background-color: #141414;
+      box-shadow: 0 0 10px #b3ddff, 0 0 10px #b3ddff, 0 0 10px #b3ddff, 0 0 10px #b3ddff;
+    }
+
+    a span {
+      position: absolute;
+      display: block;
+    }
+
+    a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ffffff);
+    }
+
+    a:hover span:nth-child(1) {
+      left: 100%;
+      transition: 1s;
+    }
+
+    a span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #ffffff);
+    }
+
+    a:hover span:nth-child(3) {
+      left: 100%;
+      transition: 1s;
+      transition-delay: 0.5s;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Baloo+Thambi');
+
+    .container > span {
+      animation: glow 1.7s ease-in-out infinite; /* Animación más lenta */
+      font-size: 20px;
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 12px lime, 0 0 50px lime, 0 0 100px lime;
+      }
+      50%, 20% {
+        color: rgb(78, 76, 76);
+        text-shadow: none;
+      }
+    }
+
+    .container > span:nth-child(1) {
+      animation-delay: 0s; /* Todas las letras comienzan la animación al mismo tiempo */
+    }
+    p{
+      color: #FFFF;
+    }
+    .container {
+      margin: 30px;
+    }
+    img{
+      margin-top: 1%;
+      width: 148px;
+      border-radius: 50%;
+    }
+    .options{
+      min-height: 100vh;
+      background-color: #000000;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; 
+      justify-content: center;
+    
+    }
+   
+    .bubbles{
+      position: relative;
+      display: flex;
+
+    }
+    .bubbles span{
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background-color: #ffffff;
+      margin: 0 4px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 10 #4fc3dc44,
+      0 0 50px #ffffff,
+      0 0 100px #ffffff;
+      animation: animate 15s linear infinite;
+      animation-duration: calc(125s / var(--i));
+    }
+
+    .bubbles span:nth-child(even) {
+      background-color: #ff2d75;
+      box-shadow: 0 0 0 10px #ff2d7544,
+      0 0 50px #ff2d75,
+      0 0 100px #ff2d75;
+    }
+
+    @keyframes animate{
+      0%{
+        transform: translateY(100vh) scale(0);
+      }
+      100%{
+        transform: translateY(-10vh) scale(1);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo-container">
+      <img src="noconex.jpeg" alt="Logo">
+    </div>
+    <div class="content">
+      <div class="container">
+        <span>S</span>
+        <span>i</span>
+        <span>n</span>
+        &nbsp;
+        <span>C</span>
+        <span>o</span>
+        <span>n</span>
+        <span>e</span>
+        <span>x</span>
+        <span>i</span>
+        <span>ó</span>
+        <span>n</span>
+      </div>
+    </div>
+    <ul>
+      <li><a href="//recurso" target="_blank">Intentar  <span></span><span></span><span></span><span></span></a></li>
+      <li><a href="http://192.168.1.3/instrucciones.html" target="_blank">Acceder D recurso <span></span><span></span><span></span><span></span></a></li>
+      <li><a href="http://192.168.1.1/" target="_blank">Accedernavegador <span></span><span></span><span></span><span></span></a></li>
+    </ul>
+  </nav>
+  <p>Lamentamos informarle que no se ha podido encontrar la comunicación esperada. Le sugerimos acceder al recurso compartido del router y ejecutar el archivo de configuración para reasignar el direccionamiento.</p>
+  <div class="options"> <!-- Contenedor para centrar las opciones -->
+    <div class="bubbles">
+      <span style="--i:11;"></span>
+      <span style="--i:12;"></span>
+      <span style="--i:24;"></span>
+      <span style="--i:10;"></span>
+      <span style="--i:14;"></span>
+      <span style="--i:23;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:16;"></span>
+      <span style="--i:19;"></span>
+      <span style="--i:20;"></span>
+      <span style="--i:22;"></span>
+      <span style="--i:25;"></span>
+      <span style="--i:18;"></span>
+      <span style="--i:21;"></span>
+      <span style="--i:15;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:26;"></span>
+      <span style="--i:17;"></span>
+      <span style="--i:13;"></span>
+      <span style="--i:28;"></span>
+
+
+    </div>
+  </div>
+
+</body>
+</html>
